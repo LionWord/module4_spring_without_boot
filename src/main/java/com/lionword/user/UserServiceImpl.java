@@ -1,4 +1,4 @@
-package ru.practicum.user;
+package com.lionword.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,12 +11,12 @@ class UserServiceImpl implements UserService {
     private final UserRepository repository;
 
     @Override
-    public List<User> getAllUsers() {
+    public List<UserDto> getAllUsers() {
         return repository.findAll();
     }
 
     @Override
-    public User saveUser(User user) {
+    public UserDto saveUser(User user) {
         return repository.save(user);
     }
 }

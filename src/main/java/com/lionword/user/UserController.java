@@ -1,4 +1,4 @@
-package ru.practicum.user;
+package com.lionword.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +12,12 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-    public List<User> getAllUsers() {
+    public List<UserDto> getAllUsers() {
         return userService.getAllUsers();
     }
 
     @PostMapping
-    public User saveNewUser(@RequestBody User user) {
+    public UserDto saveNewUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
 }

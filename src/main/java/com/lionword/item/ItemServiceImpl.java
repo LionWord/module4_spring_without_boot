@@ -1,4 +1,4 @@
-package ru.practicum.item;
+package com.lionword.item;
 
 import lombok.RequiredArgsConstructor;
 
@@ -9,7 +9,7 @@ public class ItemServiceImpl {
     private final ItemRepository repository;
 
     List<Item> getItems(Long userId) {
-        return repository.findById();
+        return repository.;
     };
     Item addNewItem(Long userId, Item item) {
         return repository.save(item);
